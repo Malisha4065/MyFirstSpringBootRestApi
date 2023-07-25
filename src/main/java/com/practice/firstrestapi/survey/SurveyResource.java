@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.function.Predicate;
 
 @RestController
 public class SurveyResource {
@@ -27,5 +29,24 @@ public class SurveyResource {
         if (survey == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         return survey;
+    }
+
+    @RequestMapping("/surveys/{surveyId}/questions")
+    public List<Question> retrieveAllSurveyQuestions(@PathVariable String surveyId) {
+        List<Question> questions = surveyService.retrieveAllSurveyQuestions(surveyId);
+        if (questions == null)
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        return questions;
+    }
+
+    @RequestMapping("/surveys/{surveyId}/questions/{questionId}")
+    public Question retrieveSpecificSurveyQuestion(@PathVariable String surveyId,
+                                         @PathVariable String questionId)
+    {
+        Question question = surveyService.retrieveSpecificSurveyQuestion(surveyId, questionId);
+
+        if (question == null)
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        return question;
     }
 }
