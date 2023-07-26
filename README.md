@@ -3,7 +3,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 Welcome to my First Spring Boot REST API!
-The SpringBoot Survey API is a RESTful web service that allows users to manage questions and surveys. Built using Spring Boot framework, it provides endpoints for creating, reading, updating, and deleting questions and surveys. This API is designed to be scalable, easy-to-use, and can be integrated into any application that requires survey-related functionality.
+The MyFirstSpringBootRestApi is a RESTful web service that allows users to manage questions and surveys. Built using Spring Boot framework, it provides endpoints for creating, reading, updating, and deleting questions and surveys. This API is designed to be scalable, easy-to-use, and can be integrated into any application that requires survey-related functionality.
 
 ## FEATURES
 * Create new surveys with multiple questions
@@ -60,4 +60,4 @@ The API provides detailed error responses to help you identify and fix any issue
 
 ## LICENSE
 
-The SpringBoot Survey API is open-source and is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as per the terms of this license.
+The MyFirstSpringBootRestApi is open-source and is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as per the terms of this license.
