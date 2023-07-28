@@ -54,6 +54,10 @@ The following are the main API endpoints provided:
 
 * `DELETE /surveys/{surveyId}/questions/{questionId}`: Delete a question.
 
+## AUTHENTICATION
+
+Authentication is required to access the SpringBoot Survey API. You need to include an authentication token in the request headers for protected endpoints. Default username is `admin` and password is `password` . You can access these settings in `SpringSecurityConfiguration.java` file.
+
 ## ERROR HANDLING
 
 The API provides detailed error responses to help you identify and fix any issues. If an error occurs, the API will return an appropriate status code along with an error message in the response body.
